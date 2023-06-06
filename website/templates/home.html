@@ -1,0 +1,29 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %}
+{% block content %}
+<!-- To show all the notes list -->
+<h1 align="center">Notes</h1>
+<ul class="list-group list-group-flush" id="notes">
+    {% for note in user.notes %}
+    <li class="list-group-item">
+        {{ note.data }}
+        <div class="d-md-flex justify-content-md-end">
+            <button
+                type="button"
+                class="btn btn-danger me-md-2 close"
+                onclick="deleteNote({{ note.id }})">
+            Delete
+        </button>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
+
+<!-- New note form-->
+<form action="" method="post">
+    <textarea name="note" id="note" class="form-control"></textarea>
+    <br>
+    <div align="center">
+        <button type="submit" class="btn btn-primary">Add Note</button>
+    </div>
+</form>
+{% endblock %}
