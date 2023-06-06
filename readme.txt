@@ -9,4 +9,4 @@ Tutorial Url: https://www.youtube.com/watch?v=dam0GPOAvVI&t=2448s
 
 To run the app:
 a. select the select the interpretor
-b. run /home/lality/anaconda3/bin/python /var/www/html/flask-notes-web-app/main.py
+b. run /home/*username*/anaconda3/bin/python /var/www/html/flask-notes-web-app/main.py
